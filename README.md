@@ -8,6 +8,8 @@ Watch movies stored on your Windows PC from a phone, tablet, or another computer
 
 The download is a single Windows app. You do not need to install Python or FFmpeg.
 
+![Home Stream desktop app](assets/home-stream-desktop.png)
+
 ## How to use the app
 
 1. Download `LocalMovieStreamer.exe` using the link above and open it on the PC that has your movies.
@@ -22,29 +24,5 @@ If Windows Firewall asks, allow the app on **Private networks** so your devices 
 ## Playback compatibility
 
 Home Stream sends each video in its original format without converting it. The browser and device you watch on need to support that file’s video and audio formats. If a movie does not play, try another browser or device, or make a compatible copy such as MP4 with H.264 video and AAC audio.
-
-## Run from source
-
-You need Windows 10 or 11 and Python 3.10 or newer. In PowerShell, open the project folder and run:
-
-```powershell
-python -m pip install -r requirements.txt
-python main.py
-```
-
-## Build the Windows app
-
-On Windows, run this from PowerShell in the project folder:
-
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\build_windows.ps1
-```
-
-The executable will be created at `dist\LocalMovieStreamer.exe`.
-
-## Network and privacy
-
-The server uses port `8080` and is intended for a trusted local network. It has no accounts, password, or encryption. Keep it on your home Wi-Fi and do not expose it directly to the public internet.
 
 Supported file extensions: `.mp4`, `.m4v`, `.webm`, `.mov`, `.mkv`, and `.avi`.
